@@ -1,11 +1,8 @@
 package com.ecommerce.ecommerce_website.security;
 
-
-
 import com.ecommerce.ecommerce_website.entity.User;
 import com.ecommerce.ecommerce_website.exception.NotFoundException;
 import com.ecommerce.ecommerce_website.repository.UserRepo;
-
 
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.userdetails.UserDetails;

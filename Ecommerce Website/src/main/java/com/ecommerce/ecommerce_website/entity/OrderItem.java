@@ -18,7 +18,7 @@ import lombok.Data;
 
 @Data
 @Entity
-@Table(name = "orders")
+@Table(name = "orders_items")
 
 public class OrderItem {
     @Id
@@ -38,7 +38,7 @@ public class OrderItem {
     private Product product;
 
     @ManyToOne(fetch = FetchType.LAZY)
-    @JoinColumn(name = "product_id")
+    @JoinColumn(name = "order_id")
     private Order order;
 
     @Column(name = "created_at")
