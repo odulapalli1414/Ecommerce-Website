@@ -19,7 +19,7 @@ import java.io.InputStream;
 @Slf4j
 public class AwsS3Service {
 
-    private final String bucketName = "ecommerce-website";
+    private final String bucketName = "my-ecommerce-website1233";
 
     @Value("${aws.s3.access}")
     private String awsS3AccessKey;
@@ -36,7 +36,7 @@ public class AwsS3Service {
             //create an s3 client with config credentials and region
             AmazonS3 s3Client = AmazonS3ClientBuilder.standard()
                     .withCredentials(new AWSStaticCredentialsProvider(awsCredentials))
-                    .withRegion(Regions.US_EAST_2)
+                    .withRegion(Regions.AP_SOUTH_1)
                     .build();
 
             //get input stream from photo
@@ -50,8 +50,7 @@ public class AwsS3Service {
             PutObjectRequest putObjectRequest = new PutObjectRequest(bucketName, s3FileName, inputStream, metadata);
             s3Client.putObject(putObjectRequest);
 
-            return "https://" + bucketName + ".s3.us-east-2.amazonaws.com/" + s3FileName;
-
+            return "https://" + bucketName + ".s3.ap-south-1.amazonaws.com/" + s3FileName;
         }catch (IOException e){
             e.printStackTrace();
             throw new RuntimeException("Unable to upload image to s3 bucket: " + e.getMessage());
