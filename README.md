@@ -32,15 +32,16 @@ Welcome to the **Ecommerce Platform**, a full-stack web application built using 
 ## 🏗️ Project Structure
 ```
 Ecommerce-Springboot-springboot-react/
-├── backend/                # Spring Boot API
-│   ├── src/main/java/com/phegondev/
+├── Backend/                # Spring Boot API
+│   ├── src/main/java/com/ecommerce/
 │   ├── resources/
 │   ├── pom.xml             # Dependencies (Maven)
 │   ├── application.properties
 │
-├── frontend/               # React App
-│   ├── src/components/
-│   ├── src/pages/
+├── Frontend/               # React App
+│   ├── src/component/
+│   ├── src/service/
+|   ├── src/style/
 │   ├── tailwind.config.js  # Tailwind CSS setup
 │   ├── package.json        # Dependencies (React)
 │
@@ -58,19 +59,19 @@ cd Ecommerce-Springboot-React
 
 ### 2️⃣ Backend Setup (Spring Boot)
 ```sh
-cd backend
+cd Backend
 mvn clean install
 mvn spring-boot:run
 ```
 
 ### 3️⃣ Frontend Setup (React)
 ```sh
-cd frontend
+cd Frontend
 npm install
 npm start
 ```
 
-🔹 The application runs at **http://localhost:3000/** (frontend) & **http://localhost:8080/** (backend).
+🔹 The application runs at **http://localhost:3000/** (Frontend) & **http://localhost:8080/** (Backend).
 
 ---
 
